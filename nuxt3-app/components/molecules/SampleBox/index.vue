@@ -1,5 +1,5 @@
 <template>
-    <div id="SampleBox">
+    <div class="SampleBox">
         <div class="title-box">
             <slot />
         </div>
