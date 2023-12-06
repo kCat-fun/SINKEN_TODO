@@ -1,0 +1,20 @@
+#SampleBox {
+    width: 500px;
+    padding: 20px;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+}
+
+.title-box {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.name-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tags-box>* {
+    margin-right: 5px;
+}
