@@ -7,7 +7,7 @@ export default {
     name: "StateTag",
     props: {
         isDone: {
-            style: Boolean,
+            type: Boolean,
             required: true,
         }
     }
