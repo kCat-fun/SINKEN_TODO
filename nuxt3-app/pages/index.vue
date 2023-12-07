@@ -1,9 +1,9 @@
 <!-- ここがTodoのページ -->
 
 <template>
-<main>
-    <h1>Todo App</h1>
-</main>
+    <main>
+        <h1>Todo App</h1>
+    </main>
 </template>
 
 <script>
