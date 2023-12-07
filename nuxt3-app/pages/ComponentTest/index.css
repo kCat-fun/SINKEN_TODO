@@ -1,3 +1,11 @@
 #ComponentTest>* {
     margin: 20px;
 }
+
+.StateTag {
+    display: flex;
+}
+
+.StateTag>* {
+    margin: 10px;
+}
