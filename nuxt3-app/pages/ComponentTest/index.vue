@@ -6,6 +6,7 @@
             <StateTag :isDone="false" />
             <StateTag :isDone="true" />
         </div>
+        <MoveToggle />
     </div>
 </template>
 
