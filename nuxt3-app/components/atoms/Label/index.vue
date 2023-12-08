@@ -1,6 +1,6 @@
 <template>
     <label :for="for">{{ text }}</label>
-  </template>
+</template>
   
   <script>
   export default {
