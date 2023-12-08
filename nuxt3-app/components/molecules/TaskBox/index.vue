@@ -2,8 +2,8 @@
     <div class="TaskBox">
         <MoveToggle class="MoveToggle" />
         <StateTag :isDone=isDone class="StateTag" />
-        <div class="taskTitle fs50">{{ taskTitle }}</div>
-        <div class="dedline fs50">{{ dedline }}</div>
+        <div class="taskTitle">{{ taskTitle }}</div>
+        <Dedline>{{ dedline }}</Dedline>
         <div class="operation-button-area">
             <div :class="['editButton', !isDone ? '' : 'operation-button-area-done']">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
