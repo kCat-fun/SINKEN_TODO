@@ -47,6 +47,7 @@ export default defineNuxtConfig({
       "@fortawesome/vue-fontawesome",
     ],
   },
+  /*
   modules: [
     [
       '@nuxtjs/firebase',
@@ -66,5 +67,5 @@ export default defineNuxtConfig({
         }
       }
     ]
-  ],
+  ],*/
 });
