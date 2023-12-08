@@ -1,11 +1,13 @@
 <template>
-    <form @submit.prevent="submit">
-        <InputField label="アカウント名" id="loginId" type="text" placeholder="アカウント名を入力" :value="loginId"
-            @input="loginId = $event" />
-        <InputField label="パスワード" id="password" type="password" placeholder="パスワードを入力" :value="password"
-            @input="password = $event" />
-        <Button text="登録" @click="submit" />
-    </form>
+    <div class="auth-page">
+        <form @submit.prevent="submit">
+            <InputField label="アカウント名" id="loginId" type="text" placeholder="アカウント名を入力" :value="loginId"
+                @input="loginId = $event" />
+            <InputField label="パスワード" id="password" type="password" placeholder="パスワードを入力" :value="password"
+                @input="password = $event" />
+            <Button text="登録" @click="submit" />
+        </form>
+    </div>
 </template>
   
 <script>
@@ -20,7 +22,7 @@ export default {
     data() {
         return {
             credentials: {
-                username: '',
+                loginId: '',
                 password: ''
             }
         };
