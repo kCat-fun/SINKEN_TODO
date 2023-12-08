@@ -12,6 +12,11 @@ export default {
   model: {
     prop: 'value',
     event: 'input'
+  },
+  methods: {
+    onInput(event) {
+      this.$emit('update:modelValue', event.target.value);
+    }
   }
 };
 </script>
