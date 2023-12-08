@@ -12,7 +12,8 @@
     <br>
     <ErrorMessage :message="errorMessage" />
     <br>
-    <Button text="新規登録" @click="Auth" />
+    <!-- <Button text="新規登録" @click="Auth" /> -->
+    <button @click="$router.push('/Auth')">新規登録</button>
   </div>
 </template>
 
