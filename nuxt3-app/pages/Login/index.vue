@@ -14,3 +14,5 @@
     },
   };
   </script>
+
+<style src="./index.css"></style>
