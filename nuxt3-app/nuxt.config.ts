@@ -10,8 +10,7 @@ export default defineNuxtConfig({
         // <meta name="description" content="My amazing site.">
         {
           name: "description",
-          content:
-            "Todoアプリ。SINKEN疑似ハッカソン用。",
+          content: "Todoアプリ。SINKEN疑似ハッカソン用。",
         },
       ],
       link: [
@@ -30,6 +29,7 @@ export default defineNuxtConfig({
   },
   css: [
     "~/assets/style/reset.css",
+    "vuetify/lib/styles/main.sass",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   components: [
@@ -43,6 +43,18 @@ export default defineNuxtConfig({
       "@fortawesome/fontawesome-svg-core",
       "@fortawesome/free-solid-svg-icons",
       "@fortawesome/vue-fontawesome",
+      "vuetify",
     ],
+  },
+  vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
+    // for HMR
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
   },
 });

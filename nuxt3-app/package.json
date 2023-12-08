@@ -16,7 +16,11 @@
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.2",
     "nuxt-fontawesome": "^0.4.0",
+    "sass": "^1.69.5",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "vite-plugin-vuetify": "^1.0.2"
   }
 }
