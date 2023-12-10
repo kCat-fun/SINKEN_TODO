@@ -7,7 +7,7 @@
 <script>
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getDatabase, ref, child, get } from "firebase/database";
 
 function hoge() {
   // TODO: Add SDKs for Firebase products that you want to use
@@ -27,13 +27,20 @@ function hoge() {
   };
 
   const app = initializeApp(firebaseConfig);
+
+
   const database = getDatabase(app);
   // ↑ 接続はできた
-
-  // あいたを取れない
-  var ref = database.ref('/https://sinken-todo-default-rtdb.firebaseio.com/');
-  ref.on("count", (snapshot) => {
-    console.log(snapshot.val());
+  
+  const dbRef = ref(database);
+  get(child(dbRef, `count`)).then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());// 値ゲットできた!
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.error(error);
   });
 }
 
