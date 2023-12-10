@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  app: {
+  devtools: { enabled: true }//,
+  /*app: {
     head: {
       charset: "utf-16",
       viewport: "width=device-width",
@@ -10,8 +10,7 @@ export default defineNuxtConfig({
         // <meta name="description" content="My amazing site.">
         {
           name: "description",
-          content:
-            "Todoアプリ。SINKEN疑似ハッカソン用。",
+          content: "Todoアプリ。SINKEN疑似ハッカソン用。",
         },
       ],
       link: [
@@ -25,9 +24,7 @@ export default defineNuxtConfig({
           href: "/favicon.ico",
         },
       ],
-      script: [
-          "https://www.gstatic.com/firebasejs/5.7.0/firebase.js"
-      ],
+      //script: ["https://www.gstatic.com/firebasejs/5.7.0/firebase.js"],
     },
   },
   css: [
