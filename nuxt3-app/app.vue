@@ -5,41 +5,40 @@
 </template>
 
 <script>
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getFirestore } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore"; 
 
 function hoge() {
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAaOhW-0kx2TWk_OnaNiKO36ETwU4rtSs4",
-    authDomain: "sinken-todo.firebaseapp.com",
-    databaseURL: "https://sinken-todo-default-rtdb.firebaseio.com",
-    projectId: "sinken-todo",
-    storageBucket: "sinken-todo.appspot.com",
-    messagingSenderId: "535927454066",
-    appId: "1:535927454066:web:29111414f055e66a8005eb",
-    measurementId: "G-QCCEPX0FNV"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
-  // ↑ 接続はできた
-
-  // あいたを取れない
-  var ref = database.ref('/https://sinken-todo-default-rtdb.firebaseio.com/');
-  ref.on("count", (snapshot) => {
-    console.log(snapshot.val());
-  });
 }
 
 export default {
   mounted() {
-    hoge();
+    // hoge();
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAaOhW-0kx2TWk_OnaNiKO36ETwU4rtSs4",
+      authDomain: "sinken-todo.firebaseapp.com",
+      databaseURL: "https://sinken-todo-default-rtdb.firebaseio.com",
+      projectId: "sinken-todo",
+      storageBucket: "sinken-todo.appspot.com",
+      messagingSenderId: "535927454066",
+      appId: "1:535927454066:web:29111414f055e66a8005eb",
+      measurementId: "G-QCCEPX0FNV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    // Initialize Cloud Firestore and get a reference to the service
+    const db = getFirestore(app);
+
+    // Add a new document in collection "cities"
+    addDoc(collection(db, "users"), {
+      name: "hgoe fuga",
+      age: 19,
+    });
   },
 }
 </script>
